@@ -1,2 +1,2 @@
 # docker-mc-eternal
-MC Eternal Docker Server
+Docker setup for Minecraft Eternal

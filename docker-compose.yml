@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  minecraft:
+    image: falcoprescher/mc-eternal-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "25565:25565"
+    volumes:
+      - "mc-eternal-volume:/srv/minecraft"
+    restart: always
+
+volumes:
+  mc:
