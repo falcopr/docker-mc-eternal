@@ -2,15 +2,31 @@ version: '3'
 
 services:
   minecraft:
-    image: falcoprescher/mc-eternal-server
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: itzg/minecraft-server
     ports:
       - "25565:25565"
     volumes:
-      - "mc-eternal-volume:/srv/minecraft"
+      - "mc-data:/data"
+    environment:
+      EULA: "TRUE"
+      CONSOLE: "false"
+      ENABLE_RCON: "false"
+      ENABLE_QUERY: "false"
+      MAX_PLAYERS: 20
+      OPS: "DocRiddles,ShrimpMaster"
+      DIFFICULTY: "normal"
+      SNOOPER_ENABLED: "false"
+      VIEW_DISTANCE: 12
+      # SEED: 747624897180923234
+      MODE: "survival"
+      MOTD: "MC Eternal Server für Hokage-sama"
+      PVP: "true"
+      FORGEVERSION: "14.23.5.2854"
+      VERSION: "1.12.2"
+      TYPE: "FORGE"
+      MEMORY: "8G"
+      # MEMORY: "3G"
     restart: always
 
 volumes:
-  mc:
+  mc-data:

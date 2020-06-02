@@ -1,0 +1,1 @@
+docker run -it --rm -v mc_eternal_mc-data:/volume debian:bullseye /bin/bash -c 'apt update && apt install wget unzip -y && cd volume && wget "https://media.forgecdn.net/files/2932/890/MCEternal\(ServerPack1.3.5.3\).zip" -O server.zip && unzip server.zip -d server_zip && mv -v ./server_zip/*/* ./ && rm -rf server.zip server_zip'

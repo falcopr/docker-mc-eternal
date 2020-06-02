@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose -p spigot up -d
+docker-compose -p mc_eternal up -d

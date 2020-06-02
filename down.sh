@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose -p mc-eternal down
+docker-compose -p mc_eternal down
